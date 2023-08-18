@@ -1,0 +1,185 @@
+@import url(main.css);
+
+body {
+  height: 100%
+}
+
+header {
+  z-index: 1
+}
+
+
+main figure {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  background: #444
+}
+
+main figure .back {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/p_20.jpg) no-repeat;
+  background-position: 0 -500px;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5
+}
+
+figure .txt {
+  position: absolute;
+  width: 400px;
+  height: 60px;
+  top: 50%;
+  margin-top: -30px;
+  left: 50%;
+  margin-left: -200px;
+  color: #fff
+}
+
+figure .txt span {}
+
+figure .txt h3 {
+  font-size: 40px
+}
+
+figure .txt p {
+  font: bold 20px/1 'Nanum Gothic'
+}
+
+main section {
+  position: relative;
+  width: 80%;
+  margin-top: 50px;
+  margin-left: -40%;
+  left: 50%
+}
+
+main section article {
+  float: left
+}
+
+main section .contect {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: #eee;
+  top: 100px;
+  margin-bottom: 0px;
+
+}
+
+main section .side {
+  width: 100%;
+  height: 50px;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+
+main section span.pre {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+ text-align: center;/
+  color: #4b4b4b;
+}
+
+form.form {
+  position: absolute;
+  left: 0;
+  top: 0;
+ line-height: 200px;
+  width: 100%;
+  text-align: left;
+  font-size: .8em;
+}
+
+.form label {
+  display: block;
+  
+}
+
+.form textarea {
+
+  } 
+footer {
+ bottom: 0px;
+ position: absolute
+ 
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:1400px) and (max-width:1599px) {
+ main figure .back {
+  background-position: 0 -300px;
+}
+}
+
+/**/
+@media screen and (min-width:1280px) and (max-width:1399px) {
+ 
+  main figure .back {
+  background-position: 0 -150px;
+}
+}
+
+/**/
+
+@media screen and (min-width:780px) and (max-width:1279px) {
+   main figure .back {
+  background-position: 0 -50px;
+}
+ 
+}
+
+
+@media screen and (min-width:480px) and (max-width:779px) {
+ figure .txt {
+  line-height: 40px;
+  margin-top: -20px;}
+
+   main figure .back {
+  background-position: 0 -0px;
+}
+ 
+}
+
+
+@media screen and (max-width:479px) {
+    main figure .back {
+  background-position: 0 -0px;
+}
+  header {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    background: #444
+  }
+
+  #logo {
+    top: 10px;
+    background: url(../img/logo_2.png) no-repeat 0 0;
+    background-size: contain;
+    width: 60px;
+    left: 50%;
+    margin-left: -30px
+  }
+
+  main {}
+
+  main figure {
+    height: 150px;
+  }
+
+
+  #gnb {
+    display: none
+  }
+
+}

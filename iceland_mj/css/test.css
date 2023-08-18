@@ -1,0 +1,213 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Play);
+@import url(font-awesome.min.css);
+@import url(normalize.css);
+
+body {
+	font: bold 20px/1 'Play';
+	color: #222;
+}
+
+header {
+	position: fixed;
+	/*반응형은 레이아웃이 바뀐다. 구조 설정할 때 포지션을 잘못 주면 망한다. 어떤건 왼쪽에 어떤건 오른쪽에 주면 망한다.*/
+	top: 0;
+	left: 0;
+	width: 15%;
+	height: 100%;
+	background: #2c2d33
+}
+#logo {
+	width: 120px;
+	height: 130px;
+	background: url(../img/logo.png) no-repeat 0 0;
+	background-size: contain;
+	/*콘텐츠에 맞춰서, 콘텐츠를 자르지 마라*/
+	position: absolute;
+	/*부모기준header 으로 정렬*/
+	top: 100px;
+	right: 50%;
+	margin-right: -50px
+	/*래프트 50% 마진을 줘서 가로값의 반을 준다.*/
+}
+
+#logo a {
+	display: block;
+	width: 100%;
+	height: 100%
+}
+
+#gnb {
+	position: relative;
+	/*헤더 밖으로 튀어나오면 안되니까*/
+	margin: 0 auto;
+	top: 300px;
+	width: 200px
+}
+
+#gnb li {}
+
+#gnb li a {
+	display: block;
+	font-size: 19px;
+	width: 200px;
+	font-weight: bold;
+	line-height: 2em;
+	padding: 10px 0;
+	transition: all .2s;
+	color: #fff;
+	text-align: center
+}
+
+#gnb li a:hover,
+#gnb li a:focus {
+	color: #97c1c1
+}
+
+#gnb li a i {
+	color: #222;
+	margin-right: 15px
+}
+
+
+section {
+	position: relative;
+	width: 85%;
+	margin-left: 15%
+}
+nav {
+	position: relative;
+	width: 85%;
+	height: 35px;
+	margin-left: 15%;
+	background: #97c1c1
+}
+section article {
+	float: left;
+	height: 250px;
+	background: #ccc
+}
+
+
+
+section article:nth-child(2) {
+	width: 30%;
+	height: 500px;
+	background: #222
+}
+
+section article:nth-child(3) {
+	background: #111;
+	width: 25%;
+	height: 500px
+}
+section article:nth-child(4) {
+	background: #97c1c1;
+	width: 25%
+}
+section article:nth-child(5) {
+	width: 25%
+}
+section article:nth-child(6) {
+	background: #111;
+	width: 25%
+}
+section article:nth-child(7) {
+	background: #2c2d33;
+	width: 50%
+}
+section article:nth-child(8) {
+	background: #bbb;
+	width: 25%
+}
+
+section article div {
+	overflow: hidden;
+	position: relative
+}
+section article .bg1 video{
+	position: relative;
+	min-width: 100%;
+  width: auto;
+	height: auto;
+	top: -200px;
+}
+section article .bg2 {
+	background: url(../img/p_3.jpg) no-repeat;
+	opacity: 0.5
+}
+
+section article .bg3 {
+	background: url(../img/p_5.jpg) no-repeat;
+	
+}
+section article .bg4 {
+	background: url(../img/p_6.jpg) no-repeat;
+	opacity: 0.2
+}
+section article .bg {
+/*	position: relative;*/
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center
+}
+section article .bg span {
+ font-size: 100px;
+ font-weight: normal;
+ color: #fff;
+ position: absolute;
+ left: 20px;
+ top: 10px;
+ opacity: 1;
+ transition: all 0.5s
+}
+header .sns {
+	position: absolute;
+	bottom: 100px;
+	right: 50%;
+	margin-right: -40px;
+	width: 80px
+}
+
+header.sns a {
+	display: block;
+	float: left;
+	
+}
+
+.sns a i {
+	font-size: 1.5em;
+	color: #fff;
+	opacity: 0.7;
+	transition: all 0.3s;
+	padding: 5px;
+}
+
+section article .txt {
+	background: #2c2d33;
+	color: #555;
+	padding: 20px;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	z-index: 0;
+	transition: all 1s
+}
+section article:hover .txt {
+	background: #2c2d33
+}
+section article .txt i {
+	font-size: 100px;
+	color: #97c1c1;
+	position: absolute;
+	right: 50%;
+	margin-right: -40px;
+	bottom: 200px;
+	transform: rotate(45deg);
+	transition: all 1s 0.2s;
+	z-index: -1
+/*z-index 가 0이다.*/
+}
+

@@ -1,0 +1,264 @@
+@import url(main.css);
+
+body {
+  background: #fff
+}
+
+main {
+  position: relative;
+  height: 100%;
+}
+
+main .iceaside {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  background: url(../img/P_19.jpg) no-repeat 0, 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 0 30%;
+  z-index: -1
+}
+
+#sub_section {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  margin-left: -40%;
+  color: #222;
+  margin-top: 50px
+}
+
+
+
+#sub_section .ice {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: -50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -150px;
+  text-align: center;
+  float: inherit;
+  line-height: 50px;
+  color: #fff;
+  z-index: 1
+}
+#sub_section span {
+ display: block
+}
+
+.name_ice {
+ display: block;
+}
+
+#sub_section .ice p {
+ 
+}
+
+#sub_section .ice p img {
+  width: 50%;
+  display: block;
+  margin-left: 100px;
+}
+
+
+#sub_section article {
+  position: relative;
+  width: 100%;
+  height: 500px;
+/*  box-shadow: 1px 1px 6px .5px #111;*/
+  background-color: #e8e8e8;
+  margin-bottom: 100px;
+}
+
+#sub_section article p {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  margin-top: 50px;
+  line-height: 1.5em;
+  z-index: 1
+}
+
+#sub_section article span.ice_text {
+ display: block;
+}
+
+#sub_section article strong {
+ line-height: 1.5em
+}
+
+
+#sub_section article span.text1 strong {
+  display: block;
+  color: #ef8f20;
+  font-size: 30px
+}
+
+#sub_section article span.text2 strong {
+  display: block;
+  margin-top: 30px;
+  color: #525252;
+  font-size: 30px
+}
+#sub_section article span.text1 {
+ font-size: 20px;
+}
+#sub_section article span.text2 {
+ font-size: 18px
+}
+
+
+footer {
+  z-index: -1;
+  bottom: 0
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:1400px) and (max-width:1599px) {
+  main figure .back {
+  background-position: 0 -300px;
+}
+
+
+  #logo {
+    top: 10px;
+    background: url(../img/logo_2.png) no-repeat 0 0;
+    background-size: contain;
+    width: 10%;
+    left: 50%;
+    margin-left: -5%
+  }
+}
+
+/**/
+@media screen and (min-width:1280px) and (max-width:1399px) {
+   main figure .back {
+  background-position: 0 -150px;
+}
+
+  #logo {
+    top: 10px;
+    background: url(../img/logo_2.png) no-repeat 0 0;
+    background-size: contain;
+    width: 10%;
+    left: 50%;
+    margin-left: -5%
+  }
+ 
+}
+
+/**/
+@media screen and (min-width:800px) and (max-width:1279px) {
+   main figure .back {
+  background-position: 0 -150px;
+}
+}
+@media screen and (min-width:780px) and (max-width:799px) {
+ #sub_section article span.text1 strong {
+  font-size: 25px
+}
+
+#sub_section article span.text2 strong {
+  font-size: 25px
+}
+#sub_section article span.text1 {
+ font-size: 18px;
+}
+#sub_section article span.text2 {
+ font-size: 18px
+}
+ 
+}
+
+
+@media screen and (min-width:480px) and (max-width:779px) {
+    main figure .back {
+  background-position: 0 -50px;
+}
+ #sub_section article{
+  height: 550px;
+ }
+ 
+ #sub_section span {
+  display: contents
+ }
+  #sub_section article span.text1 strong {
+  font-size: 25px
+}
+
+#sub_section article span.text2 strong {
+  font-size: 25px
+}
+#sub_section article span.text1 {
+ font-size: 15px;
+ line-height: 1.9em
+}
+#sub_section article span.text2 {
+ font-size: 15px;
+ line-height: 1.9em
+}
+ 
+}
+
+
+@media screen and (max-width:479px) {
+     main figure .back {
+  background-position: 0 -0px;
+}
+   header {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background: #2c2d33
+  }
+
+
+  #logo {
+    top: 10px;
+    background: url(../img/logo_2.png) no-repeat 0 0;
+    background-size: contain;
+    width: 10%;
+    left: 50%;
+    margin-left: -5%
+  }
+ main .iceaside {
+   background-position: 0 -100px;
+ }
+ #sub_section .ice {
+  top: -50%;
+  height: 300px;
+ }
+ 
+  #sub_section article{
+  height: 650px;
+ }
+ 
+ #sub_section span {
+  display: contents
+ }
+  #sub_section article span.text1 strong {
+  font-size: 25px
+}
+
+#sub_section article span.text2 strong {
+  font-size: 25px
+}
+#sub_section article span.text1 {
+ font-size: 15px;
+ line-height: 1.5em
+}
+#sub_section article span.text2 {
+ font-size: 15px;
+ line-height: 1.5em
+}
+ 
+ 
+}
