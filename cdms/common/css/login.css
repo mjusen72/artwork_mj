@@ -1,0 +1,184 @@
+@charset "uft-8";
+@import url(../fontawesome-free-6.4.0-web/css/all.min.css);
+@import url(./reset.css);
+@import url(./font.css);
+  /* Step 1: Common Properties
+  These styles are required to make icons render reliably */
+
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'NotoSansKR-Regular'
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+.wrap {
+	display: block;
+	width: 100%;
+	height: inherit;
+	background: background: rgb(97, 250, 252);
+  background: linear-gradient(0deg, rgb(26, 34, 92) 0%, rgba(52,123,210,1) 100%);
+}
+
+.wrap > div {
+	display: block;
+}
+
+
+header {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 70px;
+	background-color: #084483;
+	  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+#header-left {
+	display: block;
+	width: 362px;
+	height: 100%;
+	line-height: 70px;
+	float: left;
+	cursor: pointer
+}
+
+#header-left div {
+	display: block;
+	height: 100%;
+	line-height: 40px;
+	float: left
+}
+
+#header-left .logo {
+	display: block;
+	background: url(../img/we_logo.png) no-repeat;
+	width: 100%;
+	margin-top: 1px
+}
+
+#header-right {
+	display: block;
+	width: 40%;
+	height: 100%;
+	line-height: 40px;
+	float: right
+}
+
+#header-right div {
+	height: 100%;
+	line-height: 40px;
+	float: left;
+	text-align: center;
+	width: 25%;
+	color: #fff
+}
+
+#header-right #customer-info {
+	
+	color: #f2d678;
+	font-size: 18px;
+}
+
+#header-right #customer-info span {
+	width: 100%;
+	display: block;
+	height: 40px;
+	margin-top: 15px;
+}
+
+
+
+#header-right #login-logout {
+	color: #fff;
+	cursor: pointer
+}
+
+#header-right #login-logout:hover {
+	color: #33e1e0;
+	font-family: 'NotoSansKR-Bold'
+}
+
+#header-right span {
+	width: 100%;
+	display: block;
+	height: 40px;
+	border-right: solid 1px rgba(255, 255, 255, 0.52);
+	margin-top: 15px;
+}
+
+#header-right #help {
+	color: #fff;
+	cursor: pointer
+}
+
+#header-right #help :hover {
+	color: #33e1e0;
+	font-weight: bold
+}
+
+#header-right #help button {
+	width: 100%;
+	display: block;
+	height: 40px;
+	margin-top: 15px;
+	cursor: pointer
+}
+
+
+/*푸터*/
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(250, 250, 250, 0.15);
+}
+
+
+.footer_contain {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 15px;
+}
+
+.footer_contain i {
+	margin-right: 5px;
+}
+
+.footer_contain .sc_logo {
+	position: absolute;
+	font-size: 40px;
+	left: 20px;
+	bottom: 10px
+}
+
+.footer_contain .company {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	text-align: right;
+}
+
+@media only screen and (max-width:640px){
+	body {overflow-x: hidden; min-width:inherit;}
+	.footer_contain .sc_logo {
+display: none
+}
+}

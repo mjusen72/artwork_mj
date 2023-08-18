@@ -1,0 +1,426 @@
+@import url(./main.css);
+@import url(./reset.css);
+@import url(./font.css);
+
+* {
+	box-sizing: border-box;
+}
+
+main {
+	height: 1110px;
+}
+
+/*네비게이션*/
+gnb {
+	height: 1110px;
+}
+
+section#project_container {
+	min-height: 850px;
+}
+
+section#project_container > div {
+	display: block;
+	float: left
+}
+
+section#project_container > span {
+	display: block;
+	float: left
+}
+
+section#project_container > a {
+	display: block;
+	float: left
+}
+
+section#project_container > ul {
+	display: block;
+	float: left
+}
+
+section#project_container > ul > li {
+	display: block;
+	float: left
+}
+
+section#project_container > ul > li > a {
+	display: block;
+	float: left
+}
+
+
+
+#project_contain_name {
+	height: 35px;
+}
+
+#project_contain_name > span {
+	position: relative;
+	display: block;
+	font-weight: bolder;
+	font-size: 22px;
+	color: #444
+}
+
+
+#project_contain_header div.on {
+	background: #edebc0;
+	font-weight: 600;
+	color: #333;
+}
+
+#project_contain_info {
+	height: 140px;
+	width: 50%
+}
+
+#project_contain_info ul.header_name_box > li {
+	height: 25%;
+}
+
+#project_contain_noti {
+	width: 43.5%;
+	height: 275px;
+}
+
+#project_contain_noti > ul {
+	height: auto;
+	top: 16px;
+}
+
+#project_contain_noti > span {
+	margin-top: 2%;
+}
+
+/*차시 퍼센트*/
+
+#chasi_contain_progress {
+	position: absolute;
+	width: 50%;
+	height: 120px;
+	top: 270px;
+	font-size: 14px;
+	text-align: center;
+	font-size: 14px;
+	border: solid 1px #666;
+	left: 2.5%;
+}
+
+#chasi_contain_progress .chasi_name {
+	position: relative;
+	display: block;
+	padding-left: 2.5%;
+	top: 10px;
+	width: 100%;
+	height: 30px;
+	text-align: left;
+	font-family: 'NotoSansKR-Black';
+	font-weight: bold;
+	font-size: 16px;
+	color: #1d1a74
+}
+
+
+#chasi_contain_progress > ul {
+	position: relative;
+	width: 95%;
+	margin-left: 2.5%;
+	height: 90px;
+	font-family: 'NotoSansKR-Black';
+}
+
+#chasi_contain_progress > ul > li {
+	position: relative;
+	float: left;
+	width: 14.28%;
+	font-size: 20px;
+	height: 70px;
+	top: 50%;
+	margin-top: -30px;
+	font-weight: bold;
+	border-right: 1px dotted #ddd;
+}
+
+#chasi_contain_progress > ul > li:last-child {
+	border-right: none;
+}
+
+#chasi_contain_progress > ul > li > p {
+	font-size: 15px;
+	font-weight: normal;
+	margin-top: 10px;
+	color: #555;
+}
+
+#chasi_contain_progress > ul > li span.red {
+	color: #be2b2b;
+}
+
+#chasi_contain_progress > ul > li span.orange {
+	color: #e5871b;
+}
+
+#chasi_contain_progress > ul > li span.yellow {
+	color: #dec148;
+}
+
+#chasi_contain_progress > ul > li span.blue {
+	color: #57d1ef;
+}
+
+#chasi_contain_progress > ul > li span.green {
+	color: #7abc95;
+}
+
+
+/*=-======================== 차시 ===============================*/
+
+.pro_chasi:before {
+	position: relative;
+	content: '· 차시 진행도';
+	color: #1d1a74;
+	font-weight: bold;
+	top: -10px;
+}
+
+.pro_chasi a.chasi_run {
+	position: absolute;
+	color: #666;
+	top: -13px;
+	left: 110px;
+	background: #6b86ce;
+	border: 1px solid #666;
+	border-radius: 2px;
+	padding: 3px 5px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.pro_chasi {
+	position: relative;
+	top: 50px;
+	left: 2.5%;
+	width: 95%;
+	height: auto;
+}
+
+#chasi_down {
+	position: absolute;
+	display: block;
+	line-height: 20px;
+	background: #6b86ce;
+	border: 1px solid #666;
+	border-radius: 2px;
+	padding: 3px 5px;;
+	color: #fff;
+	bottom: 0px;
+	right: 0px;
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#chasi_down:hover {
+	background: #db6d6d;
+}
+
+#chasi_table {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	border: 1px solid;
+	font-size: 14px
+}
+
+#chasi_table thead {
+	width: 100%;
+	height: 100%;
+}
+
+#chasi_table thead > tr {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid;
+	box-sizing: border-box;
+	background: #f3f4de;
+	font-weight: bolder
+}
+
+#chasi_table thead > tr > th {
+	border-left: 1px solid;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+#chasi_table thead > tr > td {
+	border-left: 1px solid;
+	box-sizing: border-box
+}
+
+/* th 윗줄 */
+
+#chasi_table thead > tr > th:nth-child(1) {
+	width: 5%;
+	/* 차시 */
+}
+
+#chasi_table thead > tr > th:nth-child(2) {
+	width: 20%;
+	cursor: pointer
+		/* 차시명 */
+}
+
+#chasi_table thead > tr > th:nth-child(2) a {
+	display: block;
+	/* 차시명 */
+}
+
+#chasi_table thead > tr > th:nth-child(3) {
+	width: 10%;
+	/* sme */
+}
+
+#chasi_table thead > tr > th:nth-child(4) {
+	width: 10%;
+	/* 원고 */
+}
+
+#chasi_table thead > tr > th:nth-child(5) {
+	width: 10%;
+	/* SB(스토리보드) */
+}
+
+#chasi_table thead > tr > th:nth-child(6) {
+	width: 10%;
+	/* 영상 */
+}
+
+#chasi_table thead > tr > th:nth-child(7) {
+	width: 10%;
+	/* 고객사 검토 */
+}
+
+#chasi_table thead > tr > th:nth-child(8) {
+	width: 25%;
+	/* 개발 */
+}
+
+
+/* td - 아랫줄 */
+#chasi_table thead > tr > td:nth-child(1) {
+	width: 5%;
+	/* 원고_초안 */
+}
+
+#chasi_table thead > tr > td:nth-child(2) {
+	width: 5%;
+	/* 원고_확정 */
+}
+
+#chasi_table thead > tr > td:nth-child(3) {
+	width: 5%;
+	/* SB_초안 */
+}
+
+#chasi_table thead > tr > td:nth-child(4) {
+	width: 5%;
+	/* SB 확정 */
+}
+
+#chasi_table thead > tr > td:nth-child(5) {
+	width: 5%;
+	/* 영상_촬영 */
+}
+
+#chasi_table thead > tr > td:nth-child(6) {
+	width: 5%;
+	/* 영상_가편집 */
+}
+
+#chasi_table thead > tr > td:nth-child(7) {
+	width: 5%;
+	/* 고객사 검토_검토 */
+}
+
+#chasi_table thead > tr > td:nth-child(8) {
+	width: 5%;
+	/* 고객사 검토_수정 */
+}
+
+#chasi_table thead > tr > td:nth-child(9) {
+	width: 5%;
+	/* 개발_디자인 */
+}
+
+#chasi_table thead > tr > td:nth-child(10) {
+	width: 5%;
+	/* 개발_종편 */
+}
+
+#chasi_table thead > tr > td:nth-child(11) {
+	width: 5%;
+	/* 개발 HTML */
+}
+
+/* td 끝 */
+
+#chasi_table tbody > tr {
+	border-bottom: 1px solid;
+}
+
+#chasi_table tbody > tr > td {
+	border-left: 1px solid;
+	box-sizing: border-box;
+	height: 35px;
+	line-height: 35px;
+
+}
+
+#chasi_table tbody > tr > td:nth-child(2) {
+	/*	cursor: pointer*/
+}
+
+.editable-input {
+  /* 기존 스타일 유지 */
+  width: 100%; /* 인풋창을 100% 너비로 설정하여 원래 td 칸의 크기에 맞춤 */
+}
+
+#chasi_table td {
+  /* 기존 스타일 유지 */
+  cursor: pointer;
+  position: relative; /* 인풋창이 td 칸에 꽉 차도록 position 속성 추가 */
+}
+
+#chasi_table td.editing {
+  /* 기존 스타일 유지 */
+  padding: 0;
+}
+
+#chasi_table tr.selected {
+  background-color: #f3f3f3;
+}
+
+#edit_tdplus_btn,
+#edit_tdelet_btn,
+#edit_tdelet_btn {
+	margin-top: 10px;
+	display: block;
+	line-height: ;
+	padding: 3px 8px;
+	background: #eee;
+	float: left;
+	margin-right: 5px;
+	border-radius: 4px;
+	border: solid 1px #777;
+	cursor: pointer
+}
+
+#edit_tdplus_btn:hover,
+#edit_tdelet_btn:hover,
+#edit_tdelet_btn:hover{
+	background: #ccc
+}
