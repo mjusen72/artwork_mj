@@ -166,7 +166,6 @@ $(document).ready(function() {
     var textarea = currentNotice.find("textarea");
     var modifiedContent = textarea.val();
     textarea.prop("disabled", true);
-    // 여기서 수정된 내용을 서버에 저장하는 로직을 추가할 수 있습니다.
   });
 
   // 평소에는 textarea 비활성화
@@ -176,7 +175,7 @@ $(document).ready(function() {
   $(".noti_input textarea").each(function(index) {
     var textarea = $(this);
     var classes = textarea.attr("class");
-    var newClass = classes + "_" + ("0" + (index + 1)).slice(-2); // 순번은 01, 02, 03... 형태로 만듭니다.
+    var newClass = classes + "_" + ("0" + (index + 1)).slice(-2); // 순번은 01, 02, 03
     textarea.attr("class", newClass);
   });
 

@@ -178,7 +178,7 @@ function convertToIcon(value) {
 	}
   }
 
-// 평균 계산 함수 (수정된 부분)
+// 평균 계산 함수
 function calculateAverage() {
 	const progressKeys = Object.keys(tableData[0]).filter(key => key !== 'no' && key !== 'title' && key !== 'sme');
 	const averageRow = {
@@ -191,7 +191,7 @@ function calculateAverage() {
 	  const key = progressKeys[i];
 	  const values = tableData.map(row => row[key]);
   
-	  // 엑스, 세모, 동그라미를 처리하기 위해 새로운 함수를 사용합니다.
+	  // 엑스, 세모, 동그라미
 	  const averageValue = calculateAverageForIcon(values);
 	  averageRow[key] = averageValue;
 	}
@@ -199,7 +199,7 @@ function calculateAverage() {
 	return averageRow;
   }
   
-// 아이콘 값들의 평균을 계산하는 함수 (수정된 부분)
+// 아이콘 값들의 평균을 계산하는 함수
 function calculateAverageForIcon(values) {
   let xCount = 0;
   let triangleCount = 0;
@@ -217,7 +217,7 @@ function calculateAverageForIcon(values) {
       circleCount++;
       totalCount++;
     } else {
-      // 아이콘 값이 아닌 경우 숫자로 간주하여 계산에 참여하도록 합니다.
+      // 아이콘 값이 아닌 경우 숫자로 간주
       totalCount++;
     }
   }
@@ -226,14 +226,14 @@ function calculateAverageForIcon(values) {
   const percentageTriangle = (triangleCount / totalCount) * 100;
   const percentageCircle = (circleCount / totalCount) * 100;
 
-  // 아이콘 값 대신 평균 값을 숫자로 계산하여 반환합니다.
+  // 아이콘 값 숫자로 계산하여 반환
   const averageValue = (percentageX * 0 + percentageTriangle * 50 + percentageCircle * 100) / 100;
   return averageValue.toFixed(0) + '%';
 }
     
 
 
-// 셀 더블클릭 시 인풋 요소로 변경하는 함수 (수정된 부분)
+// 셀 더블클릭 시 인풋 요소로 변경하는 함수
 function makeCellEditable(cell) {
   const cellValue = cell.text().trim();
   const rowIndex = cell.closest('tr').index();
@@ -251,9 +251,9 @@ function makeCellEditable(cell) {
         .addClass('editable-input')
         .appendTo(cell);
 
-      input.focus(); // 인풋 요소에 포커스를 줍니다.
+      input.focus(); // 인풋 요소에 포커스
 
-      // 입력란에서 포커스를 잃었을 때(탭을 누르거나 다른 곳을 클릭했을 때) 입력값을 적용하고 셀을 일반 텍스트로 변경
+      // 입력란에서 포커스를 잃었을 때 입력값을 적용하고 셀을 일반 텍스트로 변경
       input.blur(function () {
         const newValue = input.val().trim();
         cell.text(newValue);
@@ -274,22 +274,19 @@ function makeCellEditable(cell) {
         .addClass('editable-dropdown')
         .appendTo(cell);
 
-      // 드롭다운 메뉴에 옵션 추가
       const options = ['✕', '△', '○'];
       options.forEach(option => {
         const optionElement = $('<option>').val(option).text(option);
         dropdown.append(optionElement);
       });
 
-      // 기존 값과 일치하는 옵션 선택
       dropdown.val(cellValue);
 
-      // 드롭다운 메뉴를 클릭하면 옵션 선택 가능하도록 처리
       dropdown.click(function (event) {
         event.stopPropagation(); // 이벤트 전파 방지
       });
 
-      // 드롭다운 메뉴 선택 시 입력값을 적용하고 셀을 일반 텍스트로 변경
+
       dropdown.change(function () {
         const newValue = dropdown.val();
         cell.text(newValue);
@@ -299,8 +296,6 @@ function makeCellEditable(cell) {
     }
   }
 }
-
-
 
 
 
@@ -362,14 +357,14 @@ $("#edit_tdplus_btn").on("click", function () {
     html: '✕'
   };
 
-  tableData.push(newRow); // 데이터 배열에 새로운 행을 추가합니다.
+  tableData.push(newRow); // 데이터 배열에 새로운 행을 추가
 
-  // 기존 평균행을 삭제하고 다시 추가하여 항상 테이블의 맨 아래에 위치하도록 합니다.
+  // 기존 평균행을 삭제하고 다시 추가하여 항상 테이블의 맨 아래에 위치
   $("#chasi_table tbody tr:last").remove();
   addRow(newRow);
   addRow(averageData);
 
-  updateNoValues(); // 추가한 행의 no 값을 업데이트합니다.
+  updateNoValues(); // 추가한 행 업데이트
   updateAverageRow(); // 수정된 평균 값을 다시 계산하도록 호출
 });
 
@@ -400,9 +395,8 @@ $('#edit_tdelet_btn').on('click', function () {
 // 새로운 행 추가 시 no 값 자동 증가 함수
 function updateNoValues() {
   const rows = $('#chasi_table tbody tr');
-  const dataRows = rows.slice(0, -1); // 평균 행을 제외한 데이터 행들만 선택합니다.
+  const dataRows = rows.slice(0, -1); // 평균 행을 제외한 데이터 행들만 선택
 
-  // 데이터 행들의 'no' 값을 자동으로 증가시킵니다.
   dataRows.each(function (index) {
     const noCell = $(this).find('td:first');
     noCell.text((index + 1).toString().padStart(2, '0'));
@@ -441,10 +435,10 @@ function updateTableRowNumbers() {
 
 // 평균 값 다시 계산 함수
 function recalculateAverage() {
-  // 기존 평균 행을 삭제합니다.
+  // 기존 평균 행을 삭제
   $('#chasi_table tbody tr:last').remove();
 
-  // 새로운 평균 행을 추가합니다.
+  // 새로운 평균 행을 추가
   const averageData = calculateAverage();
   addRow(averageData);
   
@@ -463,7 +457,7 @@ function addRow(rowData) {
     row.append(cell);
   }
 
-  // 평균 행이 아니면 셀렉트 기능을 추가합니다.
+  // 평균 행이 아니면 셀렉트 기능을 추가
   if (rowData.no !== '' && rowData.title !== '평균' && rowData.sme !== '') {
     makeRowSelectable(row);
   }
@@ -503,11 +497,11 @@ function displayAverageValues() {
     'html',
   ];
 
-  // 평균 값을 계산한 후에, 특정 셀의 평균 값을 가져옵니다.
+  // 평균 값을 계산한 후에, 특정 셀의 평균 값
   const averageData = calculateAverage();
   const specificCellAverages = specificCells.map(cell => averageData[cell]);
 
-  // 평균 값을 해당 요소에 삽입합니다.
+  // 평균 값을 해당 요소에 삽입
   const progressList = document.querySelector("#chasi_contain_progress ul");
   const progressItems = progressList.querySelectorAll("li");
   const percentageElements = progressList.querySelectorAll(".percentage");
@@ -516,8 +510,7 @@ function displayAverageValues() {
     const cellValue = parseInt(specificCellAverages[i]);
     percentageElements[i].textContent = cellValue + '%';
 
-    // 여기서 필요한 경우 셀 값에 따라 특정 스타일을 추가로 적용할 수 있습니다.
-    // 예를 들어:
+  
     if (cellValue >= 90 && cellValue <= 100) {
       percentageElements[i].classList.add('red');
     } else if (cellValue >= 70 && cellValue < 90) {
@@ -532,8 +525,7 @@ function displayAverageValues() {
   }
 }
 
-// 평균 값이 업데이트될 때마다 displayAverageValues 함수를 호출하여 percentage를 수정합니다.
-// 예를 들어, 1초마다 평균 값이 업데이트되도록 설정하는 경우:
+// 1초마다 평균 값이 업데이트되도록 설정
 setInterval(displayAverageValues, 1000);
 	
   // 풋터 업데이트 함수 추가

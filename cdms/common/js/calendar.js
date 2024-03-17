@@ -3,7 +3,7 @@
   function getCurrentDate() {
     var currentDate = new Date();
     var year = currentDate.getFullYear();
-    var month = currentDate.getMonth() + 1; // 월은 0부터 시작하므로 1을 더해줍니다.
+    var month = currentDate.getMonth() + 1; 
     var day = currentDate.getDate();
 
     return {
@@ -13,19 +13,17 @@
     };
   }
 
-  // 실제 달력 시간을 입력하는 함수
+  //달력 시간
   function fillCalendar(year, month) {
     var currentDate = getCurrentDate();
     var presentMonth = currentDate.month;
 
-    // 실제 해당 월의 첫째 날짜와 마지막 날짜를 가져옵니다.
+  
     var firstDay = new Date(year, month - 1, 1).getDay();
     var lastDay = new Date(year, month, 0).getDate();
-
-    // ul 요소를 가져옵니다.
     var calendarUl = document.querySelector("#calendar_dates");
 
-    // ul 요소의 내용을 비우기 위해 li 요소를 모두 제거
+    // li 요소를 모두 제거
     while (calendarUl.firstChild) {
       calendarUl.removeChild(calendarUl.firstChild);
     }
@@ -50,10 +48,8 @@ for (var i = 0; i < 6; i++) {
     var div = document.createElement("div");
 
     if (i === 0 && j < firstDay) {
-      // 첫 번째 줄에서 첫 번째 날짜 이전은 비움
       div.textContent = "";
     } else if (date > lastDay) {
-      // 마지막 날짜 이후는 비웁니다.
       div.textContent = "";
     } else {
       // 해당 날짜를 할당
@@ -70,22 +66,17 @@ for (var i = 0; i < 6; i++) {
       div.classList.add("current-day");
     }
 
-    // 일정이 있는지 확인하고, 있으면 일정의 제목을 출력
     var savedEvents = JSON.parse(localStorage.getItem("events"));
     if (savedEvents &&
         savedEvents.hasOwnProperty(year + "-" + month) &&
         savedEvents[year + "-" + month].hasOwnProperty(date)) {
       var eventTitle = savedEvents[year + "-" + month][date].title;
-
-      // 일정 제목을 표시하기 위한 span 요소를 생성
       var span = document.createElement("span");
       span.textContent = eventTitle;
       div.appendChild(span);
 
-      // 일정이 있는 경우에 대한 클래스를 추가
       div.classList.add("date-with-event");
     } else {
-      // 일정이 없을 경우에 대한 스타일을 설정
       var span = document.createElement("span");
       span.classList.add("no-event");
       span.textContent = " ";
@@ -98,11 +89,10 @@ for (var i = 0; i < 6; i++) {
 //      div.classList.add("red");
 //    }
 			
-      // 날짜 div에 클릭 이벤트 리스너를 추가할 때, 일정 메모를 클릭하여 작은 창을 나타내는 이벤트를 추가
+      // 작은 창
       div.addEventListener("click", function () {
         openModal(this.textContent);
 
-        // 작은 창을 나타내는 이벤트를 추가
         var memoElement = document.querySelector(".event-memo");
         memoElement.addEventListener("click", showMemoWindow);
       });
@@ -181,10 +171,7 @@ function openModal(date) {
 
   modal.style.display = "block";
 
-  // 모달 창에 드래그 앤 드롭 기능 추가
-//  makeElementDraggable(modal);
 
-  // 내용 입력 필드에 드래그 앤 드롭 이벤트 중단
   var inputs = modal.querySelectorAll("input, textarea");
   inputs.forEach(function (input) {
     input.addEventListener("mousedown", function (e) {
@@ -202,12 +189,9 @@ function closeModal() {
 document.addEventListener("DOMContentLoaded", function () {
 ///////옵션창/////
 
-// 옵션창 변수 선언
 var eventTypeSelect = document.querySelector(".event_type");
 var selectedOptionDisplay = eventTypeSelect.querySelector(".selected_option");
 var optionsList = eventTypeSelect.querySelector(".options");
-
-// 이벤트 리스너 추가
 var isEventTypeSelectOpen = false;
 
 eventTypeSelect.addEventListener("click", function () {
@@ -252,7 +236,6 @@ function saveEvent() {
   var eventMemo = modalMemo.value;
 
   // 일정을 저장하는 로직을 추가
-  // 예시로 콘솔에 일정 정보를 출력하거나 다른 요소에 일정 정보를 보여줄 수 있습니다.
   console.log("일정 저장:", eventDate, eventTitle, eventMemo);
 
   // 일정을 저장한 후 원하는 곳에 일정 정보를 보여줄 수 있도록 코드를 추가
@@ -283,7 +266,6 @@ function saveEvent() {
   // 일정을 날짜 창에 출력
 var dateDiv = document.getElementById("date_" + eventDate);
 
-// 일정 제목을 표시하기 위한 span 요소를 생성
 var span = document.createElement("span");
 span.textContent = eventTitle;
 
@@ -310,11 +292,7 @@ if (dateDiv.childElementCount >= 5) {
 
 
 
-
-
-// 각 날짜 div에 클릭 이벤트 리스너 추가
 document.addEventListener("DOMContentLoaded", function () {
-  // 날짜 클릭 이벤트 리스너 추가
   var dateDivs = document.querySelectorAll("#project_contain_calendar .calender ul li:not(.weekdays) div");
   dateDivs.forEach(function (dateDiv) {
     dateDiv.addEventListener("click", function () {
