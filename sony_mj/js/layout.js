@@ -41,3 +41,70 @@ $(function(){
 	});
 
 });
+
+/* 
+new Vue({
+  el: '.wrap',
+  data: {
+    btnVisible: true,
+    navOn: false,
+    mainOn: false,
+    sectionOn: -1
+  },
+  methods: {
+    toggleBtn: function() {
+      this.btnVisible = !this.btnVisible;
+      this.navOn = true;
+      this.mainOn = true;
+    },
+    closeSection: function() {
+      this.btnVisible = true;
+      this.navOn = false;
+      this.mainOn = false;
+    },
+    selectSection: function(index) {
+      this.sectionOn = index;
+      this.btnVisible = true;
+      this.navOn = false;
+      this.mainOn = false;
+    }
+  }
+});
+*/
+
+/* 
+import React, { useState } from 'react';
+
+function App() {
+  const [btnVisible, setBtnVisible] = useState(true);
+  const [navOn, setNavOn] = useState(false);
+  const [mainOn, setMainOn] = useState(false);
+  const [sectionOn, setSectionOn] = useState(-1);
+
+  const toggleBtn = () => {
+    setBtnVisible(!btnVisible);
+    setNavOn(true);
+    setMainOn(true);
+  };
+
+  const closeSection = () => {
+    setBtnVisible(true);
+    setNavOn(false);
+    setMainOn(false);
+  };
+
+  const selectSection = (index) => {
+    setSectionOn(index);
+    setBtnVisible(true);
+    setNavOn(false);
+    setMainOn(false);
+  };
+
+  return (
+    <div className="wrap">
+    </div>
+  );
+}
+
+export default App;
+*/

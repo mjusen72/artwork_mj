@@ -127,7 +127,7 @@ $(function () {
    $('.c2 .chart').data('easyPieChart').update(30);
    $('.c3 .chart').data('easyPieChart').update(70);
    $('.c4 .chart').data('easyPieChart').update(90);
-   $('.c5 .chart').data('easyPieChart').update(30);
+   $('.c5 .chart').data('easyPieChart').update(70);
     }, 3000);   
  
 

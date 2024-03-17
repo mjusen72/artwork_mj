@@ -51,65 +51,95 @@ figure .txt p {
 
 main section {
   position: relative;
-  width: 80%;
+  width: 70%;
+  height: 400px;
   margin-top: 50px;
-  margin-left: -40%;
-  left: 50%
-}
-
-main section article {
-  float: left
-}
-
-main section .contect {
-  display: block;
-  width: 100%;
-  height: 200px;
+  margin-left: -35%;
+  margin-bottom: 100px;
+  left: 50%;
   background: #eee;
-  top: 100px;
-  margin-bottom: 0px;
-
-}
-
-main section .side {
-  width: 100%;
-  height: 50px;
-  color: aliceblue;
-  margin-bottom: 10px;
-}
-
-main section span.pre {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 100%;
- text-align: center;/
-  color: #4b4b4b;
-}
-
-form.form {
-  position: absolute;
-  left: 0;
-  top: 0;
- line-height: 200px;
-  width: 100%;
-  text-align: left;
-  font-size: .8em;
-}
-
-.form label {
-  display: block;
   
 }
 
-.form textarea {
-
-  } 
-footer {
- bottom: 0px;
- position: absolute
- 
+main section article {
 }
+
+main section .contect {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 100%;
+  left: 5%;
+  top:40px
+}
+
+
+.left-side,.right-side{
+  width: 50%;
+  display: block;
+  float: left;
+  font-size: 16px;
+  
+}
+
+.left-side {
+  
+}
+.right-side {
+  margin-top: 50px;
+}
+
+
+.form-group {
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+.form-group label, .form-group input, textarea {
+    width: 90%;
+    padding: 5px;
+}
+.left-side label{
+  display: block;
+  line-height: 30px;
+}
+
+textarea {
+  margin-top: -20px;
+    height: 200px;
+    resize: none; /* 사용자가 크기 조절하지 못하도록 */
+}
+
+.submit-button {
+  display: block;
+}
+
+.submit-button button {
+  position: absolute;
+  cursor: pointer;
+  width: 120px;
+  padding: 10px 20px;
+  background-color:#666;
+  color: #fff;
+  bottom: 100px;
+  right: 40px;
+}
+
+.submit-button button:hover {
+  background-color: #d87819;
+}
+
+footer {
+ position: fixed;
+ bottom: 0;
+}
+
+
+
+
+
+
+
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -117,6 +147,10 @@ footer {
 @media screen and (min-width:1400px) and (max-width:1599px) {
  main figure .back {
   background-position: 0 -300px;
+}
+.form-group label, .form-group input, textarea {
+  width: 90%;
+  padding: 5px;
 }
 }
 
@@ -182,4 +216,44 @@ footer {
     display: none
   }
 
+}
+@media screen and (min-width: 780px) and (max-width: 1279px), 
+       screen and (min-width: 480px) and (max-width: 779px), 
+       screen and (max-width: 479px) {
+
+        main section{
+          height: 600px;
+        }
+
+    .contect {
+      height: max-content
+    }
+
+    .left-side, .right-side, .submit-button {
+        width: 100%;
+    }
+    
+
+    .left-side, .right-side {
+        flex-basis: auto;
+    }
+    .left-side {
+      position: relative;
+      left: 50%;
+      margin-left: -40%;
+    }
+
+    .right-side{
+      width: 90%;
+      position: relative;
+      left: 50%;
+      margin-left: -40%;
+    }
+
+    .submit-button button {
+        width: 100%;
+        bottom: 60px;
+        left: 50%;
+        margin-left: -50%;
+    }
 }

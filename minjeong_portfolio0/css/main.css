@@ -311,6 +311,11 @@ section #main {
 	font-size: 45px;
 	line-height: 1.2em
 }
+
+#main p {
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 1.2em
+}
 /*bar1*/
 
 #main .bar1 {
@@ -636,7 +641,7 @@ section #main {
 
 #about .about_fg .about_txt {
 	position: absolute;
-	top: 50px;
+	top: 30px;
 	right: 300px;
 	text-align: right;
 	font-family: 'Nanum Barun Gothic' Roboto
@@ -654,14 +659,20 @@ section #main {
 }
 
 #about .about_fg p {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	font-size: 14px
 }
-#about .about_fg p:last-child {
-	margin-top: 20px;
- letter-spacing: -1px;
- font-weight: bolder
+
+#about .about_fg div.workwrap {
+    background: rgba(83, 108, 100, 0.65);
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+     letter-spacing: -1px;
+ font-weight: bold;
+    margin-bottom: 5px;
 }
+
 
 #about ul {
 	position: absolute;
@@ -729,8 +740,8 @@ section #main {
 	width: 200px;
 	top: 50%;
 	left: 50%;
-    margin-left: -550px;
-    margin-top: -220px
+    margin-left: -100px;
+    margin-top: -350px
     
 }
 #grapic .triangle {
@@ -770,6 +781,8 @@ section #main {
     color: #fff;
 }
 
+/*240303*/
+/*
 #grapic .work_header .work_bar {
 	position: absolute;
 	width: 160px;
@@ -788,6 +801,7 @@ section #main {
 #grapic .work_header .work_h_b1 {
 	float: left
 }
+*/
 /*
 #grapic .work_header .work_h_b2 {
 	float: right
@@ -834,15 +848,18 @@ section #main {
 	height: 300px;
 	text-align: center;
 	opacity: .8;
-	overflow: hidden
+	overflow: hidden;
+    display: none
 }
 
 
 #grapic .work_txt article {
 	float: left;
 	width: 100%;
+    display: none
 }
 
+/*
 #grapic .work_txt h6 {
 	padding: 30px;
 	font-size: 20px;
@@ -856,10 +873,13 @@ section #main {
 	color: #eee;
 	font-weight: normal;
 }
+*/
+/*
 #grapic .work_txt h2 {
 	margin-top: 50px;
 	color: #444
 }
+*/
 
 #grapic #slider {
 	position: absolute;
@@ -867,12 +887,10 @@ section #main {
 	height:500px;
 	left: 50%;
 	top: 50%;
-    margin-top: -250px;
-    margin-left: -300px;
+    margin-top: -180px;
+    margin-left: -425px;
 	overflow: hidden;
     background: rgba(17, 17, 17, 1);
-    min-height: 350px;
-    min-width: 650px
 }
 #slider ul {
 	position: absolute;
@@ -900,6 +918,28 @@ section #main {
 	display: block;
 	width: 100%;
 	height: 100%;
+}
+
+#slider ul li a span {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 30%;
+	bottom: -30%;
+	background: #111111a3;
+	transition: all 1s ease;
+}
+#slider ul li a:hover span{
+	bottom: 0%;
+}
+
+
+#slider ul li a span p{
+	margin: 10px 0 0 20px;
+    line-height: 1.5em;
+}
+#slider ul li a span p b {
+	line-height: 30px;
 }
 
 

@@ -341,12 +341,17 @@ header.sns a {
   font-size: 30px;
   margin-top: 10px;
   margin-bottom: 20px;
+  color: #fff;
+  text-shadow: -2px 0px rgba(56, 156, 183, 0.574), 0px 2px rgb(56, 156, 183, 0.574), 2px 0px  rgb(56, 156, 183, 0.574), 0px -2px  rgb(56, 156, 183, 0.574);
 }
 
 #main_section article .txt p em {
   font-style: normal;
-  font-weight: normal
+  font-weight: normal;
+  color: #fff;
+  line-height: initial;
 }
+
 
 #main_section article:hover .txt p strong {
   color: #fff
@@ -555,31 +560,30 @@ footer address {
   }
 
   #main_section article:nth-child(1) {
-    width: 60%
+    width: 50%
   }
 
   #main_section article:nth-child(2) {
-    width: 40%
+    width: 50%
   }
 
   #main_section article:nth-child(3) {
-    width: 40%;
-    height: 250px;
+    width: 50%;
   }
 
   #main_section article:nth-child(4) {
-    width: 33.3333%;
+    width: 50%;
     background: #222;
   }
 
   #main_section article:nth-child(5) {
-    width: 33.3333%
+    width: 50%
   }
 
   #main_section article:nth-child(6) {
     top: 500px;
-    left: 66.6666%;
-    width: 33.3333%
+    left: 0%;
+    width: 50%
   }
 
   #main_section article:nth-child(7) {
