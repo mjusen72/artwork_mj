@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>제목</title>
+	<link rel="stylesheet" href="./common/css/main.css">
+	<!-- load all Font Awesome v6 styles -->
+	<link href="./common/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
+	<!-- support v4 icon references/syntax -->
+	<link href="./common/fontawesome-free-6.4.0-web/js/all.min.js" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script src="./common/js/modernizr-custom.js"></script>
+    <script src="./common/js/main.js"></script>
+	<script src="./common/js/calendar.js"></script>
+    <script src="./common/js/loadHTML.js"></script>
+</head>
+
+
+<body>
+	<div class="wrap">
+		<header>
+			<div id="header-left" title="로고">
+				<div id="logo"></div>
+			</div>
+
+			<div id="header-right">
+
+				<div id="customer" title="유저명" >
+					<span>관리자님</span>
+				</div>
+				<div id="login-logout" title="로그아웃">
+					<span id="logout">로그아웃</span>
+				</div>
+				<div id="help" title="도움말">
+					<span>도움말</span>
+				</div>
+			</div>
+		</header>
+
+		<gnb id="gnb">
+			<div id="customer-logo">
+				<!-- 다른 회사 로고가 들어갈 부분 -->
+			</div>
+
+			<div id="customer_menu">
+				<div class="customer_project on">
+					<div class="project_name on">1. 프로젝트 네임 - 교수학습
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+					<div class="gwajeong_menu on">
+						<div class="gwajeong">1. (1)학습 과정 안내</div>
+					</div>
+				</div>
+                <!--
+				<div class="customer_project_2"> 
+
+					<div class="project_name">2. 미디어 콘텐츠 과정
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+
+					<div class="gwajeong_menu">
+						<div class="gwajeong ">1. (1)학습 과정 안내</div>
+                        
+
+						<div class="gwajeong">2. (2)학습 과정 안내</div>
+						<div class="gwajeong">3. 과정 내용 설명</div>
+						<div class="gwajeong">4. 과정 내용 설명</div>
+						<div class="gwajeong">5. 과정 내용 설명</div>
+						<div class="gwajeong">6. 과정 내용 설명</div>
+						<div class="gwajeong">7. 과정 내용 설명</div>
+
+					</div>
+
+
+				</div>-->
+			</div>
+
+		</gnb>
+
+		<main>
+			<section id="project_container">
+				<div id="project_contain_header">
+					<div class="header_name_1 on">
+						1. 프로젝트 네임 - 교수학습
+					</div>
+<!--
+					<div class="header_name_2">
+						2. 미디어 콘텐츠 과정
+					</div>
+-->
+				</div>
+
+				<div id="project_contain_name">
+					<span>프로젝트 관리</span>
+				</div>
+				<div id="project_contain_info">
+					<ul class="header_name_box">
+						<li class="namebox_1">
+							<p><strong class="hname_1">프로젝트명</strong></p>
+						</li>
+						<li class="namebox_2">
+							<p><strong class="hname_2">사업 기간</strong></p>
+						</li>
+						<li class="namebox_3">
+							<p><strong class="hname_3">사업 범위</strong></p>
+						</li>
+						<li class="namebox_4">
+							<p><strong class="hname_4">PM</strong></p>
+						</li>
+						<li class="namebox_5">
+							<p><strong class="hname_5">연락처</strong></p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="project_contain_progress">
+					<h3 class="progress_name">&middot; 프로젝트 과정</h3>
+					<ul>
+						<li>
+							<span class="percentage">0%</span>
+							<p>원고</p>
+						</li>
+						<li>
+						 <span class="percentage">0%</span>
+							<p>SB</p>
+						</li>
+						<li>
+							<span class="percentage">0%</span>
+							<p>촬영</p>
+						</li>
+						<li>
+							<span class="percentage">0%</span>
+							<p>종편</p>
+						</li>
+						<li>
+						  <span class="percentage">0%</span>
+							<p>HTML</p>
+						</li>
+					</ul>
+				</div>
+
+
+
+<div id="project_contain_noti">
+  <span></span>
+  <h3 class="noti_name">·프로젝트 메모 및 공지사항</h3>
+
+  <ul>
+    <li class="noti_list">
+      <h4></h4>
+      <p>[안내] 이슈 사항 수정 내용</p>
+    </li>
+    <li class="noti_list">
+      <h4></h4>
+      <p>[공지] 2023.11.24 중간 미팅 진행 내용</p>
+    </li>
+    <li class="noti_list">
+      <h4></h4>
+      <p>[공지] 진척도 이슈 사항</p>
+    </li>
+    <li class="noti_list">
+      <h4></h4>
+      <p>프로젝트 계약 서류 및 공정 안내</p>
+    </li>
+
+  </ul>
+
+  <div class="noti_controls">
+    <button id="prev-page"><i class="fa-solid fa-caret-left"></i></button>
+    <span id="page-num">1</span>/<span id="total-pages">1</span>
+    <button id="next-page"><i class="fa-solid fa-caret-right"></i></button>
+  </div>
+
+  <!-- 공지사항 게시판 읽기 모달창 -->
+  <div id="notice_board" class="noti_input" style="display:none">
+    <div class="notiboard_wrap">
+     <h2>공지 게시판</h2>
+      <span id="notice_exit"><i class="fa-solid fa-xmark"></i>
+      </span>
+     
+      <!-- 모달창 내용1 -->
+      <div id="noti_list_board" class="noti_input" style="display:none">
+        <div class="notice_title">
+          <b>[안내] 이슈 사항 수정 내용</b>
+          <span>2023-07-08</span>
+        </div>
+        <textarea class="noti_tarea">내용</textarea>
+      </div>
+      <!-- 모달창 내용2 -->
+      <div id="noti_list_board" class="noti_input" style="display:none">
+        <div class="notice_title">
+          <b>[공지] 2023.11.24 중간 미팅 진행 내용</b>
+          <span>2023-11-08</span>
+        </div>
+        <textarea class="noti_tarea">내용2</textarea>
+      </div>
+      <!-- 모달창 내용3 -->
+      <div id="noti_list_board" class="noti_input"  style="display:none">
+        <div class="notice_title">
+          <b>[공지] 진척도 이슈 사항</b>
+          <span>2023-11-08</span>
+        </div>
+        <textarea class="noti_tarea">내용3</textarea>
+      </div>
+      <!-- 모달창 내용4 -->
+      <div id="noti_list_board" class="noti_input"  style="display:none">
+        <div class="notice_title">
+          <b>프로젝트 계약 서류 및 공정 안내</b>
+          <span>2023-11-08</span>
+        </div>
+        <textarea class="noti_tarea">내용4</textarea>
+      </div>
+      <button id="save_notice">저장</button>
+      <button id="admin_edit_noti" style="">수정</button>
+    </div>
+  </div>
+</div>
+
+
+	<div id="project_contain_calendar">
+		<div class="calender_contain">
+			<div class="calender_name">
+				· 프로젝트 달력
+			</div>
+
+			<div class="month">
+				<div class="back" onclick="previousMonth()"><i class="fa-solid fa-caret-left"></i></div>
+				<div class="present">2023년 7월</div>
+				<div class="next" onclick="nextMonth()"><i class="fa-solid fa-caret-right"></i></div>
+			</div>
+
+			<div class="calender">
+				<ul id="calendar_dates" class="calendar-dates">
+					<li class="weekdays">
+						<div class="day">일요일</div>
+						<div class="day">월요일</div>
+						<div class="day">화요일</div>
+						<div class="day">수요일</div>
+						<div class="day">목요일</div>
+						<div class="day">금요일</div>
+						<div class="day">토요일</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="calendar_eventModal" class="calendar_modal">
+			<input type="hidden" id="calendar_modalDate">
+			<div id="clickedDate" class="clickday"></div>
+			<div class="event_type">
+				<div class="selected_option">선택</div>
+				<div class="selected_option2"><i class="fa-solid fa-chevron-down"></i></div>
+				<ul class="options">
+					<li class="option" data-value="마감">마감</li>
+					<li class="option" data-value="점검">점검</li>
+					<li class="option" data-value="미팅">미팅</li>
+					<li class="option" data-value="촬영">촬영</li>
+					<li class="option" data-value="검토">검토</li>
+				</ul>
+			</div>
+			<input type="text" id="calendar_eventTitle" placeholder="일정 제목">
+			<textarea id="calendar_eventDescription" placeholder="일정 내용"></textarea>
+			<div class="btn-container">
+				<button onclick="saveEvent()">저장</button>
+				<button onclick="closeModal()">취소</button>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+	</section>
+	</main>
+
+
+
+	</div>
+	<footer>
+		<div class="footer_contain">
+			<div class="sc_logo"><i class="fa-solid fa-horse"></i></div>
+			<div class="company">
+				<i class="fa-solid fa-phone"></i>1588-0000<br>
+				<i class="fa-solid fa-envelope"></i>00000@aaa.co.kr<br>
+				<i class="fa-solid fa-location-dot"></i>서울시 00구 00<br>
+				<i class="fa-solid fa-house"></i>00역<br>
+			</div>
+		</div>
+	</footer>
+
+
+	
+
+
+</body></html>
