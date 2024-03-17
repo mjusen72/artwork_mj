@@ -1,0 +1,85 @@
+
+@charset "uft-8";
+@import url(../fontawesome-free-6.4.0-web/css/all.min.css);
+@import url(./main.css);
+@import url(./reset.css);
+@import url(./font.css);
+
+body {
+	width: 100%;
+	height: -webkit-fill-available;
+	min-height: 1080px;
+	font-family: 'NotoSansKR-Regular'
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+
+header {
+	position: relative;
+	z-index: 55;
+    float: left;
+}
+gnb {
+	display: block;
+	width: 20%;	
+    height: 2201px;
+}
+
+#gnb div {
+	display: block;
+	width: 100%;
+	float: left;
+}
+#gnb #customer-logo{
+}
+
+main {
+    position: relative;
+    float: left;
+    height: inherit;
+    
+}
+
+section#guide_container {
+	position: relative;
+	float: left;
+	left: 50%;
+	margin: 20px 0px 0px -47.5%;
+	width: 95%;
+	min-height: 900px;
+	padding-bottom: 25px;
+	height: auto;
+	border: solid 1px #ccc
+}
+
+.guide_text {
+	display: block;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+}
+.guide_img {
+	position: relative;
+	display: block;
+	width: 950px;
+	left: 50%;
+	margin-left: -475px;
+}
+
+.guide_img img {
+	margin-bottom: 10px;
+	border: 2px solid #ccc;
+}
+
+
+footer {
+    position: relative;
+    left: 20%;
+    bottom: -201%;
+}

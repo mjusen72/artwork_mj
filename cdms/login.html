@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--  <?php include "./include/header.php"; ?>-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제목</title>
+  <link rel="stylesheet" href="./common/css/login.css">
+<link rel="stylesheet" href="./common/css/attendance.css">
+  <!-- load all Font Awesome v6 styles -->
+  <link href="./common/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
+  <!-- support v4 icon references/syntax -->
+  <link href="./common/fontawesome-free-6.4.0-web/js/all.min.js" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--  <script src="./common/js/main.js"></script>-->
+  <script src="./common/js/modernizr-custom.js"></script>
+
+<style>
+    b {display: none}
+    
+    </style>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      $("#loginID").focus();
+      $('#loginPwd').on('keypress', function(e){ if(e.keyCode == '13'){ $('.login_btn').click(loginProc()); } });
+
+    });
+
+    function loginProc(){
+
+      var loginID = $("input[name='loginID']");
+      if($.trim(loginID.val()) == "")
+      {
+        alert("아이디를 입력해 주세요");
+        loginID.focus();
+        return;
+      }
+
+      var loginPwd = $("input[name='loginPwd']");
+      if($.trim(loginPwd.val()) == "")
+      {
+        alert("비밀번호를 입력해 주세요");
+        loginPwd.focus();
+        return;
+      }
+
+      var params = $("form[name='login_form']").serialize();
+
+      $.ajax({
+        type : "POST"
+        ,url : "loginSave.php"
+        ,cache : false
+        ,dataType : "json"
+        ,data : params
+        ,success : function(data){
+
+          if(data.code == "NO")
+          {
+            $("#loginID").val("");
+            $("#loginPwd").val("");
+            $("input[name='loginID']").focus();
+            alert(data.getMsg);
+            return;
+          }
+
+          if(data.code == "YES")
+          {
+            if(data.getAuth == 'A') {
+              // location.href = "list.html";
+              location.href = "admin.html";
+            } else {
+              location.href = "index.html";
+            }
+            return;
+          }
+        },
+        error:function(req, status, error){
+          console.log("Response code : "+ req.status +"\n"+"Error message : " + error);
+          return;
+        }
+      });
+    }
+  </script>
+
+
+
+
+
+</head>
+  <body>
+
+  <div class="wrap">
+    
+
+
+  <form name="login_form" id="login_form" method="POST">
+    <input type="hidden" name="setMode" value="cdmsLogin">
+    <!-- 로그인 S -->
+    <div class="hr_login_set">
+      <div class="hr_lg_whbx"></div>
+      <div class="hr_login_box">
+        <div class="hr_txt">데이터 관리센터 CDMS</div>
+        <div class="login_whbox">
+          <div class="login_txt">Login</div>
+          <div class="hr_ipt_box">
+            <div class="hr_ipt_id">
+              <input type="text" name="loginID" id="loginID"  placeholder="User ID" class="hr_lgn_id">
+            </div>
+            <div class="hr_ipt_pw">
+              <input  type="password" name="loginPwd" id="loginPwd"  placeholder="Password" class="hr_lgn_pw">
+            </div>
+          </div>
+          <div class="hr_lgn_btn_box">
+            <a href="./index.html" class="hr_lgn_btn">로그인</a> 
+<!--              <a href="javascript:loginProc();" class="hr_lgn_btn">로그인</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+</div>
+</body>
+
+</html>
+
+

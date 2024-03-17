@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>제목</title>
+	<link rel="stylesheet" href="./common/css/admin.css">
+	<!-- load all Font Awesome v6 styles -->
+	<link href="./common/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
+	<!-- support v4 icon references/syntax -->
+	<link href="./common/fontawesome-free-6.4.0-web/js/all.min.js" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./common/js/main.js"></script>
+	<script src="./common/js/admin.js"></script>
+	<script src="./common/js/modernizr-custom.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div id="header-left" title="로고">
+				<div id="logo"></div>
+			</div>
+
+			<div id="header-right">
+
+				<div id="customer" title="유저명">
+					<span>관리자님</span>
+				</div>
+				<div id="login-logout" title="로그아웃">
+					<span id="logout">로그아웃</span>
+				</div>
+				<div id="help" title="도움말">
+					<span>도움말</span>
+				</div>
+			</div>
+		</header>
+
+		<gnb id="gnb">
+			<div id="customer-logo">
+				<!-- 다른 회사 로고가 들어갈 부분 -->
+			</div>
+			<div id="customer_menu">
+				<div class="customer_project">
+					<div class="project_name">1. 고객사 &middot; 사업관리
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+				</div>
+				<div class="customer_project">
+					<div class="project_name">2. 사용방법
+						<i class="fa-solid fa-xmark"></i>
+					</div>
+				</div>
+			</div>
+
+		</gnb>
+
+		<main>
+
+			<section id="Client_list">
+
+				<div class="Client_list_name">
+					Client list
+				</div>
+
+				<div class="add_client_button">
+					<button id="addClientBtn">고객사 추가</button>
+					<button id="addProjectBtn">프로젝트 추가</button>
+				</div>
+
+				<div class="client_ul">
+
+					<ul>
+						<li style="width: 5%;">No</li>
+						<li style="width: 15%;">고객사</li>
+						<li style="width: 50%;">프로젝트</li>
+						<li style="width: 20%;">사업기간</li>
+						<li style="width: 10%;">링크</li>
+					</ul>
+					<!--	테이블을 묶어서 늘리면 고객사가 늘어나는 거고  -->
+					<!--		.Client_text를 늘리면 프로젝트가 늘어난다	-->
+
+					<table class="client-table" id="client">
+						<!--1행-->
+						<tr class="Client_name">
+							<th class="No" rowspan="5">01</th>
+							<th class="clientName" rowspan="5">예시교육원</th>
+							<td>2023년 교육과정 유아 초등교육</td>
+							<td>2023.05.08~2023.12.05</td>
+							<td><a href="#">과정이동</a></td>
+						</tr>
+<!--왜 체크 박스가 안나오지?-->
+						<!--2행-->
+						<tr class="Client_text">
+							<td>2023년 교육과정 유아 고등교육</td>
+							<td>2024.05.08~2024.12.05</td>
+							<td><a href="#">과정이동</a></td>
+						</tr>
+						<!--3행-->
+						<tr class="Client_text">
+							<td>2050년 교육과정 편찬</td>
+							<td>2050.05.08~2050.12.05</td>
+							<td><a href="#">과정이동</a></td>
+						</tr>
+
+					</table>
+					<!--추가 테이블-->
+					<!--	테이블을 묶어서 늘리면 고객사가 늘어나는 거고  -->
+					<!--		.Client_text를 늘리면 프로젝트가 늘어난다	-->
+
+					<table class="client-table" id="client">
+						<!--1행-->
+						<tr class="Client_name">
+							<th class="No" rowspan="5">02</th>
+							<th class="clientName" rowspan="5">예시문화교육</th>
+							<td>서양미술학</td>
+							<td>2025.05.08~2025.12.05</td>
+							<td><a href="#">과정이동</a></td>
+						</tr>
+						<!--2행-->
+						<!--
+						<tr class="Client_text">
+							<td>2023년 교육과정 유아 고등교육</td>
+							<td>2024.05.08~2024.12.05</td>
+							<td><a href="#">과정이동</a></td>
+						</tr>
+
+						<tr class="Client_text">
+							<td>2050년 교육과정 편찬</td>
+							<td>2050.05.08~2050.12.05</td>
+							<td><a href="#">과정이동</a></td>
+						</tr>
+-->
+
+					</table>
+
+
+					<!-- 고객사 추가 버튼 -->
+
+
+					<!-- 모달 창 구조 -->
+					<div id="client_field" class="modal" style="display:none;">
+						<div class="client_field_content">
+							<span class="close">&times;</span>
+							<h2>고객사 추가</h2>
+							<form id="clientfieldForm">
+								<input type="hidden" id="modalType" value="">
+								<div class="field">
+									<label for="clientName">No</label>
+									<input type="text" id="clientName" name="clientName" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">프로젝트</label>
+									<input type="text" id="projectName" name="projectName" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">사업기간</label>
+									<input type="text" name="day" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">사업기간</label>
+									<input type="text" name="day" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">링크</label>
+									<input type="text" name="link" required autocomplete="off">
+								</div>
+								<!-- 변경된 type 속성 -->
+								<button type="button" id="saveBtn">저장</button>
+							</form>
+						</div>
+					</div>
+
+					<!-- 모달 수정삭제 구조 -->
+					<div id="client_del" class="modal" style="display:none;">
+						<div class="client_del_content">
+							<span class="close">&times;</span>
+							<h2>수정 및 삭제</h2>
+							<form id="clientdelForm">
+								<input type="hidden" id="modalType" value="">
+								<div class="field">
+									<label for="clientName">No</label>
+									<input type="text" id="clientName" name="clientName" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">프로젝트</label>
+									<input type="text" id="projectName" name="projectName" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">사업기간</label>
+									<input type="text" name="day" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">사업기간</label>
+									<input type="text" name="day" required autocomplete="off">
+								</div>
+								<div class="field">
+									<label for="projectName">링크</label>
+									<input type="text" name="link" required autocomplete="off">
+								</div>
+								<!-- 변경된 type 속성 -->
+								<button type="button" id="deletBtn">삭제</button>
+								<button type="button" id="crystalBtn">수정</button>
+							</form>
+						</div>
+					</div>
+
+
+				</div>
+
+			</section>
+
+
+
+		</main>
+
+	</div>
+
+	<footer>
+		<div class="footer_contain">
+			<div class="sc_logo"><i class="fa-solid fa-horse"></i>SCROWN</div>
+			<div class="company">
+				<i class="fa-solid fa-phone"></i>1588-9499<br>
+				<i class="fa-solid fa-envelope"></i>scrown@scrown.co.kr<br>
+				<i class="fa-solid fa-location-dot"></i>서울시 금천구 서부샛길 606 대성디폴리스지식산업센터 A동 2104호<br>
+				<i class="fa-solid fa-house"></i>에스크라운 가산디지털역 6번출구 도보 5분<br>
+			</div>
+		</div>
+	</footer>
+	<script src="./common/js/loadHTML.js"></script>
+
+</body></html>

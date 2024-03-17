@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>제목</title>
+	<link rel="stylesheet" href="./common/css/gwajeong.css">
+	<!-- load all Font Awesome v6 styles -->
+	<link href="./common/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
+	<!-- support v4 icon references/syntax -->
+	<link href="./common/fontawesome-free-6.4.0-web/js/all.min.js" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="./common/js/modernizr-custom.js"></script>
+    <script src="./common/js/chasi.js"></script>
+	<script src="./common/js/gwajeong.js"></script>
+    <script src="./common/js/loadHTML.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div id="header-left" title="로고">
+				<div id="logo"></div>
+			</div>
+
+			<div id="header-right">
+
+				<div id="customer" title="유저명">
+					<span>관리자님</span>
+				</div>
+				<div id="login-logout" title="로그아웃">
+					<span id="logout">로그아웃</span>
+				</div>
+				<div id="help" title="도움말">
+					<span>도움말</span>
+				</div>
+			</div>
+		</header>
+
+		<gnb id="gnb">
+			<div id="customer-logo">
+				<!-- 다른 회사 로고가 들어갈 부분 -->
+			</div>
+
+			<div id="customer_menu">
+				<div class="customer_project">
+					<a>
+						<div class="project_name">1. 프로젝트 네임 - 교수학습
+							<i class="fa-solid fa-xmark"></i>
+						</div>
+					</a>
+					<div class="gwajeong_menu">
+						<div class="gwajeong on">1. (1)학습 과정 안내</div>
+<!--
+						<div class="gwajeong">2. (2)학습 과정 안내</div>
+						<div class="gwajeong">3. 과정 내용 설명</div>
+						<div class="gwajeong">4. 과정 내용 설명</div>
+						<div class="gwajeong">5. 과정 내용 설명</div>
+						<div class="gwajeong">6. 과정 내용 설명</div>
+						<div class="gwajeong">7. 과정 내용 설명</div>
+-->
+					</div>
+				</div>
+				<div class="customer_project">
+                    <!--
+						<div class="project_name">2. 미디어 콘텐츠 과정
+							<i class="fa-solid fa-xmark"></i>
+						</div>
+					<div class="gwajeong_menu">
+						<div class="gwajeong">1. (1)학습 과정 안내</div>
+
+						<div class="gwajeong">2. (2)학습 과정 안내</div>
+						<div class="gwajeong">3. 과정 내용 설명</div>
+						<div class="gwajeong">4. 과정 내용 설명</div>
+						<div class="gwajeong">5. 과정 내용 설명</div>
+						<div class="gwajeong">6. 과정 내용 설명</div>
+						<div class="gwajeong">7. 과정 내용 설명</div>
+
+					</div>-->
+				</div>
+
+			</div>
+
+		</gnb>
+
+		<main>
+			<section id="project_container">
+				<div id="project_contain_header">
+					<div class="header_name_1 on">
+						(1)학습 과정 안내
+					</div>
+				</div>
+
+				<div id="project_contain_name">
+					<span>1. 프로젝트 네임 - 교수학습</span>
+				</div>
+				<div id="project_contain_info">
+					<ul class="header_name_box">
+						<li class="namebox_2">
+							<p><strong class="hname_2">과정명</strong>1. (1)학습 과정 안내</p>
+						</li>
+						<li class="namebox_3">
+							<p><strong class="hname_3">차시</strong>2차시</p>
+						</li>
+						<li class="namebox_4">
+							<p><strong class="hname_4">과정 담당</strong>ㅇㅇㅇ</p>
+						</li>
+						<li class="namebox_4">
+							<p><strong class="hname_4">연락처</strong>000-0000-0000</p>
+						</li>
+					</ul>
+				</div>
+
+
+				<div id="chasi_contain_progress">
+					<h3 class="chasi_name">&middot; 차시 진행도</h3>
+					<ul>
+						<li>
+							<span class="percentage">0</span>
+							<p>원고</p>
+						</li>
+						<li>
+							<span class="percentage">0</span>
+							<p>SB</p>
+						</li>
+						<li>
+							<span class="percentage">0</span>
+							<p>영상</p>
+						</li>
+						<li>
+							<span class="percentage">0</span>
+							<p>검토</p>
+						</li>
+
+						<li>
+							<span class="percentage">0</span>
+							<p>디자인</p>
+						</li>
+
+						<li>
+							<span class="percentage">0</span>
+							<p>종편</p>
+						</li>
+						<li>
+							<span class="percentage">0</span>
+							<p>HTML</p>
+						</li>
+					</ul>
+				</div>
+
+
+
+
+				<div id="project_contain_noti">
+					<span></span>
+					<h3 class="noti_name">·프로젝트 메모 및 공지사항</h3>
+
+					<ul>
+						<li class="noti_list">
+							<h4></h4>
+							<p>[안내] 이슈 사항 수정 내용</p>
+						</li>
+						<li class="noti_list">
+							<h4></h4>
+							<p>[공지] 2023.11.24 중간 미팅 진행 내용</p>
+						</li>
+
+
+					</ul>
+
+					<div class="noti_controls">
+						<button id="prev-page"><i class="fa-solid fa-caret-left"></i></button>
+						<span id="page-num">1</span>/<span id="total-pages">1</span>
+						<button id="next-page"><i class="fa-solid fa-caret-right"></i></button>
+					</div>
+
+					<!-- 공지사항 게시판 읽기 모달창 -->
+					<!-- 공지사항 게시판 읽기 모달창 -->
+					<div id="notice_board" class="noti_input" style="display:none">
+						<div class="notiboard_wrap">
+							<h2>공지 게시판</h2>
+							<span id="notice_exit"><i class="fa-solid fa-xmark"></i>
+							</span>
+
+							<!-- 모달창 내용1 -->
+							<div id="noti_list_board" class="noti_input" style="display:none">
+								<div class="notice_title">
+									<b>[안내] 이슈 사항 수정 내용</b>
+									<span>2023-07-08</span>
+								</div>
+								<textarea class="noti_tarea">내용</textarea>
+							</div>
+							<!-- 모달창 내용2 -->
+							<div id="noti_list_board" class="noti_input" style="display:none">
+								<div class="notice_title">
+									<b>[공지] 2023.11.24 중간 미팅 진행 내용</b>
+									<span>2023-11-08</span>
+								</div>
+								<textarea class="noti_tarea">내용2</textarea>
+							</div>
+
+							<button id="save_notice">저장</button>
+							<button id="admin_edit_noti" style="">수정</button>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- 테이블 역할을 하는 엘리먼트 -->
+				<div class="pro_chasi">
+				<a href="./1_gwajeong_1_chasi.html" class="chasi_run">진행 게시판으로 이동</a>
+				<button id="chasi_down" type="button" onclick="location.href='./download_html/index.html'">다운로드 페이지로 이동</button>
+					<table id="chasi_table">
+						<thead>
+							<tr>
+								<th rowspan="2">차시</th>
+								<th rowspan="2">차시명</th>
+								<th rowspan="2">SME</th>
+								<th colspan="2">원고</th>
+								<th colspan="2">SB</th>
+								<th colspan="2">영상</th>
+								<th colspan="2">고객사 검토</th>
+								<th colspan="3">개발</th>
+							</tr>
+							<tr>
+								<td>초안</td>
+								<td>확정</td>
+								<td>초안</td>
+								<td>확정</td>
+								<td>촬영</td>
+								<td>가편집</td>
+								<td>검토</td>
+								<td>수정</td>
+								<td>디자인</td>
+								<td>종편</td>
+								<td>HTML</td>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+					<!-- 테이블 수정 버튼 -->
+					<button id="edit_tdplus_btn">추가</button>
+					<button id="edit_tdelet_btn">삭제</button>
+					<button id="edit_tdelet_btn">저장</button>
+				</div>
+
+
+			</section>
+
+
+
+
+		</main>
+
+	</div>
+	<footer>
+		<div class="footer_contain">
+			<div class="sc_logo"><i class="fa-solid fa-horse"></i></div>
+			<div class="company">
+				<i class="fa-solid fa-phone"></i>1588-0000<br>
+				<i class="fa-solid fa-envelope"></i>00000@aaa.co.kr<br>
+				<i class="fa-solid fa-location-dot"></i>서울시 00구 00<br>
+				<i class="fa-solid fa-house"></i>00역<br>
+			</div>
+		</div>
+	</footer>
+
+
+</body></html>
+
+
